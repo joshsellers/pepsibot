@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from random import choice
 import ast
 
+VERSION = "1.0"
+
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 admins = ast.literal_eval(os.getenv('ADMINISTRATORS'))
@@ -25,7 +27,7 @@ def mod_rep(id, change):
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    print(f'{client.user} (v{VERSION}) has connected to Discord')
 
 @client.event
 async def on_disconnect():
