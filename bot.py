@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from random import choice
 import ast
 
-VERSION = "1.0"
+VERSION = "1.1"
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
